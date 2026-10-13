@@ -8,9 +8,11 @@ import ResumeUpload from './pages/student/ResumeUpload';
 import Jobs from './pages/student/Jobs';
 import Applications from './pages/student/Applications';
 import CompanyLogin from './pages/company/Login';
+import CompanyRegister from './pages/company/Register';
 import CompanyDashboard from './pages/company/Dashboard';
 import PostJob from './pages/company/PostJob';
 import Applicants from './pages/company/Applicants';
+import CandidateSearch from './pages/company/CandidateSearch';
 import Chat from './pages/Chat';
 
 const styles = {
@@ -53,8 +55,12 @@ export default function App() {
 
             {/* Company routes */}
             <Route path="/company/login" element={<CompanyLogin />} />
+            <Route path="/company/register" element={<CompanyRegister />} />
             <Route path="/company/dashboard" element={
               <PrivateRoute role="company"><CompanyDashboard /></PrivateRoute>
+            } />
+            <Route path="/company/search" element={
+              <PrivateRoute role="company"><CandidateSearch /></PrivateRoute>
             } />
             <Route path="/company/post-job" element={
               <PrivateRoute role="company"><PostJob /></PrivateRoute>

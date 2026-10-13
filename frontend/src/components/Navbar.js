@@ -26,8 +26,9 @@ export default function Navbar() {
         {!token && (
           <>
             <Link to="/student/login" style={styles.link}>Student Login</Link>
-            <Link to="/student/register" style={styles.link}>Register</Link>
+            <Link to="/student/register" style={styles.link}>Student Register</Link>
             <Link to="/company/login" style={styles.link}>Company Login</Link>
+            <Link to="/company/register" style={styles.link}>Company Register</Link>
           </>
         )}
         {token && role === 'student' && (
@@ -42,6 +43,7 @@ export default function Navbar() {
         {token && role === 'company' && (
           <>
             <Link to="/company/dashboard" style={styles.link}>Dashboard</Link>
+            <Link to="/company/search" style={styles.link}>Candidate Search</Link>
             <Link to="/company/post-job" style={styles.link}>Post Job</Link>
             <Link to="/chat" style={styles.link}>Chat</Link>
           </>
