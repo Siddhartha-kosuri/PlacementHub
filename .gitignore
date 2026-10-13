@@ -6,11 +6,11 @@ yarn-error.log*
 
 # Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.azure
+.env.*
 *.env
+!.env.example
+!.env.azure.example
 
 # Build outputs
 dist/
@@ -31,12 +31,24 @@ Thumbs.db
 *.swp
 *.swo
 
-# Logs
+# Logs and diagnostic dumps
 logs/
 *.log
+headers*.txt
+resources*.txt
+url*.txt
+error*.txt
+
+# Deploy archives & packages
+*.zip
+!azure-functions/function.zip
+
+# Azure CLI local configuration
+.azure/
 
 # Uploads
 uploads/
 
 # Coverage
 coverage/
+
